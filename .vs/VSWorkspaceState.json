@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Elo.Api",
+    "\\Elo.Api\\Models",
+    "\\Elo.Api\\Services"
+  ],
+  "SelectedNode": "\\Elo.Api\\Services\\EloRatingService.cs",
+  "PreviewInSolutionExplorer": false
+}

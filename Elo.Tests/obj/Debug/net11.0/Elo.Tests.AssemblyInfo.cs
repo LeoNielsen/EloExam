@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Elo.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0a2343842459b42afa611f231c45cf2bfceaae4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Elo.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Elo.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

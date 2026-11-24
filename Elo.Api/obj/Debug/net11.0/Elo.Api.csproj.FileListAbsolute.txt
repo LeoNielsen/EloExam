@@ -135,3 +135,7 @@ C:\Dev\EloExam\Elo.Api\obj\Debug\net11.0\Elo.Api.pdb
 C:\Dev\EloExam\Elo.Api\obj\Debug\net11.0\Elo.Api.genruntimeconfig.cache
 C:\Dev\EloExam\Elo.Api\obj\Debug\net11.0\ref\Elo.Api.dll
 C:\Dev\EloExam\Elo.Api\bin\Debug\net11.0\FluentAssertions.dll
+C:\Dev\EloExam\Elo.Api\obj\Debug\net11.0\Elo.Api.sourcelink.json
+C:\Dev\EloExam\Elo.Api\bin\Debug\net11.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Dev\EloExam\Elo.Api\bin\Debug\net11.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Dev\EloExam\Elo.Api\bin\Debug\net11.0\Swashbuckle.AspNetCore.SwaggerUI.dll

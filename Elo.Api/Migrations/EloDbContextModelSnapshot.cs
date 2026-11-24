@@ -16,7 +16,7 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
     // If you encounter a merge conflict in the line below, it means you need to
     // discard one of the migration branches and recreate its migrations on top of
     // the other branch. See https://aka.ms/efcore-docs-migrations-conflicts for more info.
-    public override string LastMigrationId => "20261124122528_InitialCreate";
+    public override string LastMigrationId => "20261124151539_InitialCreate";
 
     protected override void BuildModel(ModelBuilder modelBuilder)
     {
@@ -35,19 +35,29 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
 
                 NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(id);
 
-                b.Property<int>("LoserId")
+                b.Property<int>("BlueScore")
+                    .HasColumnType("integer");
+
+                b.Property<int>("BlueTeamId")
                     .HasColumnType("integer");
 
                 b.Property<DateTime>("PlayedAt")
                     .HasColumnType("timestamp with time zone");
 
+                b.Property<int>("RedScore")
+                    .HasColumnType("integer");
+
+                b.Property<int>("RedTeamId")
+                    .HasColumnType("integer");
+
                 b.Property<int>("State")
                     .HasColumnType("integer");
 
-                b.Property<int>("WinnerId")
-                    .HasColumnType("integer");
-
                 b.HasKey("Id");
+
+                b.HasIndex("BlueTeamId");
+
+                b.HasIndex("RedTeamId");
 
                 b.ToTable("Matches");
             });
@@ -70,6 +80,67 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
                 b.HasKey("Id");
 
                 b.ToTable("Players");
+            });
+
+        modelBuilder.Entity("Elo.Api.Models.Team", b =>
+            {
+                var id = b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("integer");
+
+                NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(id);
+
+                b.Property<int>("AttackerId")
+                    .HasColumnType("integer");
+
+                b.Property<int>("DefenderId")
+                    .HasColumnType("integer");
+
+                b.HasKey("Id");
+
+                b.HasIndex("AttackerId");
+
+                b.HasIndex("DefenderId");
+
+                b.ToTable("Teams");
+            });
+
+        modelBuilder.Entity("Elo.Api.Models.Match", b =>
+            {
+                b.HasOne("Elo.Api.Models.Team", "BlueTeam")
+                    .WithMany()
+                    .HasForeignKey("BlueTeamId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.HasOne("Elo.Api.Models.Team", "RedTeam")
+                    .WithMany()
+                    .HasForeignKey("RedTeamId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("BlueTeam");
+
+                b.Navigation("RedTeam");
+            });
+
+        modelBuilder.Entity("Elo.Api.Models.Team", b =>
+            {
+                b.HasOne("Elo.Api.Models.Player", "Attacker")
+                    .WithMany()
+                    .HasForeignKey("AttackerId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.HasOne("Elo.Api.Models.Player", "Defender")
+                    .WithMany()
+                    .HasForeignKey("DefenderId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
+
+                b.Navigation("Attacker");
+
+                b.Navigation("Defender");
             });
 #pragma warning restore 612, 618
     }

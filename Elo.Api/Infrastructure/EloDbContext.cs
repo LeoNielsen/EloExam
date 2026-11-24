@@ -1,3 +1,8 @@
+using Elo.Api.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Elo.Api.Infrastructure;
+
 public class EloDbContext : DbContext
 {
     public EloDbContext(

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PdxR5zMnOVU=",
+  "dgSpecHash": "Adk8njYigog=",
   "success": true,
   "projectFilePath": "C:\\Dev\\EloExam\\Elo.Api\\Elo.Api.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\leoni\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\11.0.0\\microsoft.entityframeworkcore.analyzers.11.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\microsoft.entityframeworkcore.design\\11.0.0\\microsoft.entityframeworkcore.design.11.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\11.0.0\\microsoft.entityframeworkcore.relational.11.0.0.nupkg.sha512",
+    "C:\\Users\\leoni\\.nuget\\packages\\microsoft.extensions.apidescription.server\\11.0.0\\microsoft.extensions.apidescription.server.11.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\microsoft.extensions.dependencymodel\\11.0.0\\microsoft.extensions.dependencymodel.11.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\microsoft.net.stringtools\\18.9.6\\microsoft.net.stringtools.18.9.6.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\microsoft.openapi\\3.11.0\\microsoft.openapi.3.11.0.nupkg.sha512",
@@ -26,6 +27,10 @@
     "C:\\Users\\leoni\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\npgsql\\11.0.0\\npgsql.11.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\11.0.0\\npgsql.entityframeworkcore.postgresql.11.0.0.nupkg.sha512",
+    "C:\\Users\\leoni\\.nuget\\packages\\swashbuckle.aspnetcore\\11.0.1\\swashbuckle.aspnetcore.11.0.1.nupkg.sha512",
+    "C:\\Users\\leoni\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\11.0.1\\swashbuckle.aspnetcore.swagger.11.0.1.nupkg.sha512",
+    "C:\\Users\\leoni\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\11.0.1\\swashbuckle.aspnetcore.swaggergen.11.0.1.nupkg.sha512",
+    "C:\\Users\\leoni\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\11.0.1\\swashbuckle.aspnetcore.swaggerui.11.0.1.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\system.composition\\10.0.1\\system.composition.10.0.1.nupkg.sha512",
     "C:\\Users\\leoni\\.nuget\\packages\\system.composition.attributedmodel\\10.0.1\\system.composition.attributedmodel.10.0.1.nupkg.sha512",
