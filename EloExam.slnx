@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Elo.Api/Elo.Api.csproj" />
+  <Project Path="Elo.Tests/Elo.Tests.csproj" />
+</Solution>
