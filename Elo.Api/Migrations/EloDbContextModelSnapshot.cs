@@ -16,7 +16,7 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
     // If you encounter a merge conflict in the line below, it means you need to
     // discard one of the migration branches and recreate its migrations on top of
     // the other branch. See https://aka.ms/efcore-docs-migrations-conflicts for more info.
-    public override string LastMigrationId => "20261124151539_InitialCreate";
+    public override string LastMigrationId => "20261124194020_AddUniqueMatchExternalId";
 
     protected override void BuildModel(ModelBuilder modelBuilder)
     {
@@ -40,6 +40,9 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
 
                 b.Property<int>("BlueTeamId")
                     .HasColumnType("integer");
+
+                b.Property<Guid>("ExternalId")
+                    .HasColumnType("uuid");
 
                 b.Property<DateTime>("PlayedAt")
                     .HasColumnType("timestamp with time zone");
@@ -98,9 +101,10 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
 
                 b.HasKey("Id");
 
-                b.HasIndex("AttackerId");
-
                 b.HasIndex("DefenderId");
+
+                b.HasIndex("AttackerId", "DefenderId")
+                    .IsUnique();
 
                 b.ToTable("Teams");
             });
@@ -110,13 +114,13 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
                 b.HasOne("Elo.Api.Models.Team", "BlueTeam")
                     .WithMany()
                     .HasForeignKey("BlueTeamId")
-                    .OnDelete(DeleteBehavior.Cascade)
+                    .OnDelete(DeleteBehavior.Restrict)
                     .IsRequired();
 
                 b.HasOne("Elo.Api.Models.Team", "RedTeam")
                     .WithMany()
                     .HasForeignKey("RedTeamId")
-                    .OnDelete(DeleteBehavior.Cascade)
+                    .OnDelete(DeleteBehavior.Restrict)
                     .IsRequired();
 
                 b.Navigation("BlueTeam");
@@ -129,13 +133,13 @@ partial class EloDbContextModelSnapshot : ModelSnapshot
                 b.HasOne("Elo.Api.Models.Player", "Attacker")
                     .WithMany()
                     .HasForeignKey("AttackerId")
-                    .OnDelete(DeleteBehavior.Cascade)
+                    .OnDelete(DeleteBehavior.Restrict)
                     .IsRequired();
 
                 b.HasOne("Elo.Api.Models.Player", "Defender")
                     .WithMany()
                     .HasForeignKey("DefenderId")
-                    .OnDelete(DeleteBehavior.Cascade)
+                    .OnDelete(DeleteBehavior.Restrict)
                     .IsRequired();
 
                 b.Navigation("Attacker");

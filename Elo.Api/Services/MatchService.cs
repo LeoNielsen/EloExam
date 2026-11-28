@@ -1,81 +1,104 @@
-using Elo.Api.Infrastructure;
 using Elo.Api.Models;
-using Microsoft.EntityFrameworkCore;
+
 
 namespace Elo.Api.Services;
 
 public class MatchService
 {
-    private readonly EloDbContext _db;
+    private readonly ITeamService _teamService;
+    private readonly IMatchRepository _matchRepository;
     private readonly EloRatingService _eloRatingService;
-    private readonly TeamService _teamService;
-    
-    public MatchService(EloDbContext db, TeamService teamService, EloRatingService eloRatingService)
+
+    public MatchService(
+        ITeamService teamService,
+        IMatchRepository matchRepository,
+        EloRatingService eloRatingService)
     {
-        _db = db;
         _teamService = teamService;
+        _matchRepository = matchRepository;
         _eloRatingService = eloRatingService;
     }
 
-    public async Task<Match> CreateMatch(int blueTeamId, int redTeamId, int blueScore, int redScore)
+    public async Task<Match> CreateMatch(
+        Guid externalId,
+        int blueTeamId,
+        int redTeamId,
+        int blueScore,
+        int redScore)
     {
-        var blueTeam = await _teamService.GetTeam(blueTeamId);
-        var redTeam = await _teamService.GetTeam(redTeamId);
+        // Check for duplicate
+        if (await _matchRepository.ExistsAsync(externalId))
+        {
+            throw new InvalidOperationException(
+                "Match has already been registered.");
+        }
 
+        // Get teams
+        var blueTeam =
+            await _teamService.GetTeam(blueTeamId);
+
+        var redTeam =
+            await _teamService.GetTeam(redTeamId);
+
+        // Create match
         var match = new Match
         {
+            ExternalId = externalId,
+
             BlueTeamId = blueTeamId,
-            RedTeamId = redTeamId,
             BlueTeam = blueTeam,
+
+            RedTeamId = redTeamId,
             RedTeam = redTeam,
+
             BlueScore = blueScore,
             RedScore = redScore,
+
             PlayedAt = DateTime.UtcNow,
+
             State = MatchState.Created
         };
 
+        // Validate
         ValidateMatch(match);
 
+        // Calculate ELO and process
         ProcessMatch(match);
 
-        _db.Matches.Add(match);
-
-        await _db.SaveChangesAsync();
+        // Save
+        await _matchRepository.AddAsync(match);
 
         return match;
     }
 
-    private async Task<Team> GetTeam(int id)
+    public void ValidateMatch(Match match)
     {
-        return await _db.Teams
-            .Include(x => x.Attacker)
-            .Include(x => x.Defender)
-            .FirstAsync(x => x.Id == id);
-    }
+        var playerIds = new[]
+        {
+            match.BlueTeam.AttackerId,
+            match.BlueTeam.DefenderId,
+            match.RedTeam.AttackerId,
+            match.RedTeam.DefenderId
+        };
 
-    private void ValidateMatch(Match match)
-    {
-        if (match.BlueTeamId == match.RedTeamId)
+        if (playerIds.Distinct().Count() != 4)
         {
             throw new ArgumentException(
-                "A team cannot play itself.");
+                "A player can only participate once in a match.");
         }
 
-        if (match.BlueScore == match.RedScore)
-        {
-            throw new ArgumentException(
-                "Draws are not allowed.");
-        }
+        bool blueWon =
+            match.BlueScore > match.RedScore;
 
-        bool blueWon = match.BlueScore > match.RedScore;
+        int winnerScore =
+            blueWon
+                ? match.BlueScore
+                : match.RedScore;
 
-        int winnerScore = blueWon
-            ? match.BlueScore
-            : match.RedScore;
-
-        int loserScore = blueWon
-            ? match.RedScore
-            : match.BlueScore;
+        int loserScore =
+            blueWon
+                ? match.RedScore
+                : match.BlueScore;
 
         if (winnerScore != 10)
         {
@@ -98,7 +121,7 @@ public class MatchService
         if (match.State != MatchState.Validated)
         {
             throw new InvalidOperationException(
-                "Match must be validated first.");
+                "Match must be validated before processing.");
         }
 
         var result =

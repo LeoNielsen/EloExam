@@ -116,3 +116,9 @@ C:\Dev\EloExam\Elo.Tests\obj\Debug\net11.0\Elo.Tests.pdb
 C:\Dev\EloExam\Elo.Tests\obj\Debug\net11.0\Elo.Tests.genruntimeconfig.cache
 C:\Dev\EloExam\Elo.Tests\obj\Debug\net11.0\ref\Elo.Tests.dll
 C:\Dev\EloExam\Elo.Tests\obj\Debug\net11.0\Elo.Tests.sourcelink.json
+C:\Dev\EloExam\Elo.Tests\bin\Debug\net11.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Dev\EloExam\Elo.Tests\bin\Debug\net11.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Dev\EloExam\Elo.Tests\bin\Debug\net11.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Dev\EloExam\Elo.Tests\bin\Debug\net11.0\Castle.Core.dll
+C:\Dev\EloExam\Elo.Tests\bin\Debug\net11.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Dev\EloExam\Elo.Tests\bin\Debug\net11.0\Moq.dll

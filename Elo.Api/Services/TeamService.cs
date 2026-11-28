@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Elo.Api.Services;
 
-public class TeamService
+public class TeamService : ITeamService
 {
     private readonly EloDbContext _db;
     private readonly PlayerService _playerService;

@@ -1,7 +1,7 @@
-﻿namespace Elo.Api.Dtos;
-
-public class CreateMatchRequest
+﻿public class CreateMatchRequest
 {
+    public Guid ExternalId { get; set; }
+
     public int BlueTeamId { get; set; }
 
     public int RedTeamId { get; set; }

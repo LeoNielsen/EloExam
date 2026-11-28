@@ -1,9 +1,38 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2a67bb43_002Db8a7_002D4c34_002D98f8_002D3fc22a95a1e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="EloRatingServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003ADbUpdateException_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FUsers_003Fleoni_003FAppData_003FRoaming_003FJetBrains_003FRider2026_002E3_003Fresharper_002Dhost_003FSourcesCache_003F75c924331e0533f2fa6322a16b0ad19938faa7b83962cc48f264d9960ffbb_003FDbUpdateException_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2a67bb43_002Db8a7_002D4c34_002D98f8_002D3fc22a95a1e8/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="EloRatingServiceTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=58c56b00_002Df81e_002D48fd_002Da74f_002Dc8e84271fcf4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Continuous Testing" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=58c56b00_002Df81e_002D48fd_002Da74f_002Dc8e84271fcf4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Continuous Testing" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8ec1ac0d_002Daf1b_002D405c_002D965c_002D5d255ff549eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Valid_scores_should_be_accepted" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Valid_scores_should_be_accepted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Loser_score_must_be_between_0_and_9&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Draw_should_not_be_accepted&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Team_should_not_be_able_to_play_itself&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Valid_match_should_end_as_processed&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Winner_must_have_exactly_10_points&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Player_can_only_participate_once_in_a_match&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Duplicate_match_should_be_rejected&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Valid_match_should_be_saved_once&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchRepositoryIntegrationTests.Match_should_be_saved_to_database&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.Integration.MatchRepositoryIntegrationTests.Match_should_be_saved_with_teams_and_players&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.Integration.MatchRepositoryIntegrationTests.Existing_match_should_be_found_by_external_id&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.Integration.MatchRepositoryIntegrationTests.Duplicate_external_id_should_be_rejected_by_database&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests.Larger_score_difference_should_give_larger_rating_change&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b3c18985_002D6ba9_002D4d2d_002D9c16_002D1a5c5a5ac793/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Winning_team_should_gain_rating" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests.Winner_should_gain_and_loser_should_lose_rating&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests.Underdog_should_gain_more_than_favorite&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests.Larger_score_difference_should_give_larger_rating_change&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests.Individual_player_rating_should_affect_rating_change&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.EloRatingServiceTests.All_player_ratings_should_be_affected&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::50382D2C-C668-A73E-5699-F5D77AC53AF4::net11.0::Elo.Tests.MatchServiceTests.Valid_scores_should_be_accepted&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

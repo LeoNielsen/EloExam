@@ -1,4 +1,5 @@
 using Elo.Api.Infrastructure;
+using Elo.Api.Repositories;
 using Elo.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,11 @@ builder.Services.AddSwaggerGen();
 // Services
 builder.Services.AddScoped<PlayerService>();
 builder.Services.AddScoped<TeamService>();
+builder.Services.AddScoped<MatchService>();
+builder.Services.AddScoped<EloRatingService>();
+builder.Services.AddScoped<PlayerService>();
+builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IMatchRepository, MatchRepository>();
 builder.Services.AddScoped<MatchService>();
 builder.Services.AddScoped<EloRatingService>();
 

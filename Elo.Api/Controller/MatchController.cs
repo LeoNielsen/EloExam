@@ -22,6 +22,7 @@ public class MatchController : ControllerBase
     {
         var match =
             await _matchService.CreateMatch(
+                request.ExternalId,
                 request.BlueTeamId,
                 request.RedTeamId,
                 request.BlueScore,

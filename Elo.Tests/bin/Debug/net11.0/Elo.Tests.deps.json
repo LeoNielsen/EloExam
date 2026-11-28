@@ -9,11 +9,25 @@
       "Elo.Tests/1.0.0": {
         "dependencies": {
           "Elo.Api": "1.0.0",
+          "FluentAssertions": "8.11.0",
+          "Microsoft.EntityFrameworkCore": "11.0.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "11.0.0",
           "Microsoft.NET.Test.Sdk": "17.14.1",
+          "Moq": "4.21.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "11.0.0",
           "xunit": "2.9.3"
         },
         "runtime": {
           "Elo.Tests.dll": {}
+        }
+      },
+      "Castle.Core/5.2.1": {
+        "runtime": {
+          "lib/net6.0/Castle.Core.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.1.0",
+            "localPath": "Castle.Core.dll"
+          }
         }
       },
       "FluentAssertions/8.11.0": {
@@ -64,6 +78,18 @@
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.0.26.53018",
             "localPath": "Microsoft.EntityFrameworkCore.Abstractions.dll"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/11.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "11.0.0"
+        },
+        "runtime": {
+          "lib/net11.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.26.53018",
+            "localPath": "Microsoft.EntityFrameworkCore.InMemory.dll"
           }
         }
       },
@@ -410,6 +436,18 @@
           }
         }
       },
+      "Moq/4.21.0": {
+        "dependencies": {
+          "Castle.Core": "5.2.1"
+        },
+        "runtime": {
+          "lib/net6.0/Moq.dll": {
+            "assemblyVersion": "4.21.0.0",
+            "fileVersion": "4.21.0.0",
+            "localPath": "Moq.dll"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -439,6 +477,46 @@
             "assemblyVersion": "11.0.0.0",
             "fileVersion": "11.0.0.0",
             "localPath": "Npgsql.EntityFrameworkCore.PostgreSQL.dll"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore/11.0.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "11.0.1",
+          "Swashbuckle.AspNetCore.SwaggerGen": "11.0.1",
+          "Swashbuckle.AspNetCore.SwaggerUI": "11.0.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/11.0.1": {
+        "dependencies": {
+          "Microsoft.OpenApi": "3.11.0"
+        },
+        "runtime": {
+          "lib/net11.0/Swashbuckle.AspNetCore.Swagger.dll": {
+            "assemblyVersion": "11.0.1.0",
+            "fileVersion": "11.0.1.3345",
+            "localPath": "Swashbuckle.AspNetCore.Swagger.dll"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/11.0.1": {
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "11.0.1"
+        },
+        "runtime": {
+          "lib/net11.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
+            "assemblyVersion": "11.0.1.0",
+            "fileVersion": "11.0.1.3345",
+            "localPath": "Swashbuckle.AspNetCore.SwaggerGen.dll"
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/11.0.1": {
+        "runtime": {
+          "lib/net11.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
+            "assemblyVersion": "11.0.1.0",
+            "fileVersion": "11.0.1.3345",
+            "localPath": "Swashbuckle.AspNetCore.SwaggerUI.dll"
           }
         }
       },
@@ -501,7 +579,8 @@
           "FluentAssertions": "8.11.0",
           "Microsoft.AspNetCore.OpenApi": "11.0.0",
           "Microsoft.EntityFrameworkCore": "11.0.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "11.0.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "11.0.0",
+          "Swashbuckle.AspNetCore": "11.0.1"
         },
         "runtime": {
           "Elo.Api.dll": {
@@ -517,6 +596,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Castle.Core/5.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wHARzQA695jwwKreOzNsq54KiGqKP38tv8hi8e2FXDEC/sA6BtrX90tVPDkOfVu13PbEzr00TCV8coikl+D1Iw==",
+      "path": "castle.core/5.2.1",
+      "hashPath": "castle.core.5.2.1.nupkg.sha512"
     },
     "FluentAssertions/8.11.0": {
       "type": "package",
@@ -553,6 +639,13 @@
       "path": "microsoft.entityframeworkcore.abstractions/11.0.0",
       "hashPath": "microsoft.entityframeworkcore.abstractions.11.0.0.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.InMemory/11.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5S6FD3sP3sJuiUy4iBUvhwEv5xdpj5If/kh/kns/1hIbtUeDQZFB3McZaRU+YToVwoFPy2k7pcU4Bg5+8QEO9Q==",
+      "path": "microsoft.entityframeworkcore.inmemory/11.0.0",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.11.0.0.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Relational/11.0.0": {
       "type": "package",
       "serviceable": true,
@@ -588,6 +681,13 @@
       "path": "microsoft.testplatform.testhost/17.14.1",
       "hashPath": "microsoft.testplatform.testhost.17.14.1.nupkg.sha512"
     },
+    "Moq/4.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HUjrhhzEJ/AfbSBCnR8lPkpveVGpV/dNuOlnpfqBNTME93izly1CRV4N5zBySqz4m2yCRlHLPy/PnPzYokbwIg==",
+      "path": "moq/4.21.0",
+      "hashPath": "moq.4.21.0.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -608,6 +708,34 @@
       "sha512": "sha512-qis2Q6aRq8AeHhDBqrXialkhpvCS3PgRk3pZFqE4bDFpXa0wFD51pGK95g/9wbZAS2vEJECYR0Txzt+KpfXf4w==",
       "path": "npgsql.entityframeworkcore.postgresql/11.0.0",
       "hashPath": "npgsql.entityframeworkcore.postgresql.11.0.0.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-udw95V+yj51HjaSs0+OiLYO9KrSylm2ebPH/7N41e8qQ+k/mCtXwiWaMbAW3kOPfE4yhe5sFOd1hNV+M8fXiqA==",
+      "path": "swashbuckle.aspnetcore/11.0.1",
+      "hashPath": "swashbuckle.aspnetcore.11.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.Swagger/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tTcRgM4wIEYZEHMUi0f3miviaIBrsmLtyT6Hl+cp3VBsMHkGbXgDal3QEOaMg6wU36radS2iXZakN7xMFt5u1w==",
+      "path": "swashbuckle.aspnetcore.swagger/11.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swagger.11.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QRnhVGmkzSiD+9WAlYWfCjwD1erUjQjP1Y73Q2yaw0a5RqCvXsOMqyY7gyaSAIx/Q4TWmGpcAPjWk7Z6dPipAQ==",
+      "path": "swashbuckle.aspnetcore.swaggergen/11.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggergen.11.0.1.nupkg.sha512"
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/11.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mu0j015xm7W/Axz6J6bXrh+/qEiyUGQUIGrWWvivv732yO1LtnmyV3zRwWB1dOFvlrU/CWUZqIYe1+hIcsCacg==",
+      "path": "swashbuckle.aspnetcore.swaggerui/11.0.1",
+      "hashPath": "swashbuckle.aspnetcore.swaggerui.11.0.1.nupkg.sha512"
     },
     "xunit/2.9.3": {
       "type": "package",
